@@ -8,20 +8,23 @@
 
 <h2>Leaderboard</h2>
 
-<table>
+<table class="table table-bordered">
     <tr>
-        <td>
+        <th>
             Rank
-        </td>
-        <td>
+        </th>
+        <th>
             Username
-        </td>
-        <td>
-            # Games
-        </td>
-        <td>
+        </th>
+        <th>
+            Win/Loss ratio
+        </th>
+        <th>
+            Total games
+        </th>
+        <th>
             Rating
-        </td>
+        </th>
     </tr>
     @foreach (LeaderboardEntry e in Model.LeaderboardEntries.OrderByDescending(x => x.EloRating))
     {
@@ -31,6 +34,9 @@
             </td>
             <td>
                 @e.UserName
+            </td>
+            <td>
+                %
             </td>
             <td>
                 @e.NumberOfGames

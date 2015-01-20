@@ -437,7 +437,7 @@ namespace MvcPWy.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "LeaderBoard");
         }
 
         //
@@ -474,7 +474,7 @@ namespace MvcPWy.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "LeaderBoard");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
